@@ -69,11 +69,6 @@ For more verbose logging, you can add the `--log` flag. Example:
 ```bash
 --log sync=trace,p2p=trace
 ```
-
-If you run into any issues with these instructions, please let us know. If you found this useful and would like to contribute, we accept donations (ETH, BasedAI, BASED, PepeCoin, etc.)
-```bash
-0xcFE9B77CADf15f9DfF3E96db4cBEC1861834fcF5
-```
 ---
 
 ## Overview
