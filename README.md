@@ -42,8 +42,8 @@ Configure the Rust toolchain to default to the latest stable version, add nightl
 ```bash
 rustup default stable
 rustup update
-rustup update nightly
-rustup target add wasm32-unknown-unknown --toolchain nightly
+rustup toolchain install nightly-2025-01-07
+rustup target add wasm32-unknown-unknown --toolchain nightly-2025-01-07
 ```
 
 Clone and navigate to git repository
@@ -56,12 +56,12 @@ cd basednode
 
 Build `basednode`
 ```bash
-cargo build --release
+cargo +nightly-2025-01-07 build --release
 ```
 
 Run `basednode` using genesis json and mainnet bootnode.
 ```bash
-./target/release/basednode --name "Your Node Name" --chain "./mainnet1_raw.json" --rpc-external --unsafe-rpc-external   --rpc-methods Unsafe --bootnodes /dns/mainnet.basedaibridge.com/tcp/30333/p2p/12D3KooWC6F9XVH3YPGWkEbMdJp97bdMS4jT1LCPn24yFd6FWnhE
+./target/release/basednode --name "Your Node Name" --chain "./mainnet1_raw.json" --rpc-external --unsafe-rpc-external   --rpc-methods Unsafe --bootnodes /dns/mainnet.basedaibridge.com/tcp/30333/p2p/12D3KooWCQy4hiiA9tHxvQ2PPaSY3mUM6NkMnbsYf2v4FKbLAtUh
 ```
 You should see your node begin to sync. You can experiment with the other flags (`rpc`-related), but they may be required to sync with the network and have your node be accessible.
 
